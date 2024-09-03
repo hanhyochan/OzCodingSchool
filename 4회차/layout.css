@@ -85,25 +85,27 @@ a[href="#"] {
     height: 100%;
 }
 
-ul{
+#con_wrap{
     width: 100%;
     height: 50rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 5rem;
+    float: left;
+    padding-bottom: 5rem;
 }
 li {
     background-color: rgb(72, 255, 161);
     margin-right: 0;
+    margin-right: 5rem;
 }
 
 .long_box{
     background-color: rgb(255, 250, 160);
 }
 
-/* .m_box{
-
-} */
+.m_box{
+    margin-right: 0;
+}
 
 #top_btn{
     position: fixed;
