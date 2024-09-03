@@ -59,7 +59,7 @@ svg{
 
 .chat_bubble {
   width: 100%;
-  margin-top: 7rem;
+  margin-top: 10rem;
 }
 
 .chat_pic {
@@ -103,7 +103,7 @@ svg{
   width: 100%;
   display: flex;
   flex-direction: row-reverse;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 .layout {
   display: flex;
