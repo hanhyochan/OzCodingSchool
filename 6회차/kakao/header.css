@@ -1,0 +1,68 @@
+.header {
+  /* 
+    1. 전체 위치 고정
+    2. 너비 100%
+    3. 콘텐츠 좌우 패딩 */
+  background-color: red;
+  position: fixed;
+  margin: 0;
+  width: 100%;
+  padding: 0 10.5rem;
+  z-index: 999;
+}
+.header-content {
+  /* 
+    1. 콘텐츠 최대 너비
+    2. 콘텐츠 높이
+    3. 콘텐츠 가운데 정렬
+    4. 스페이스 비트윈
+    */
+  width: 100%;
+  max-width: 100rem;
+  height: 6.3rem;
+  margin: auto;
+  justify-content: space-between;
+}
+.header-logo {
+  /* 
+    1. 로고 수평 정렬
+    */
+  align-items: center;
+  font-size: 2rem;
+}
+.header-nav {
+  /* 
+    1. nav 수평 정렬
+    2. nav 너비
+    */
+  background-color: antiquewhite;
+  align-items: center;
+  width: 100%;
+  max-width: 45rem;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.nap-top {
+  position: reletive;
+}
+.nav-sub {
+  display: none;
+  position: absolute;
+  background-color: black;
+  border-radius: 100rem;
+  list-style-type: none;
+  justify-content: space-between;
+}
+.nav-top:hover .nav-sub {
+  display: flex;
+}
+.nav-sub > li {
+  margin: 0.7rem 1.4rem 0.7rem 0.5rem;
+}
+.nav-sub-item {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+}
