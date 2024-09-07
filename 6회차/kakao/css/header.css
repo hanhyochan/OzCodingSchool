@@ -5,7 +5,7 @@
     3. 콘텐츠 좌우 패딩 */
   position: fixed;
   width: 100%;
-  z-index: 998;
+  z-index: 999;
 }
 .header-layout {
   /* 
@@ -37,7 +37,6 @@
     2. nav 너비
     3. nav 스페이스 비트윈
     */
-  background-color: antiquewhite;
   align-items: center;
   width: 100%;
   max-width: 45rem;
@@ -71,6 +70,11 @@
     */
   display: flex;
 }
+.nav-top-title {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+}
 .nav-sub > li {
   margin: 0.7rem 1.4rem 0.7rem 0.5rem;
 }
@@ -87,6 +91,10 @@
     width: 100%;
     max-width: 9rem;
 }
+.header-icon-1{
+  width: 1.4rem;
+  height: 1.4rem;
+}
 
 
 /* mid */
@@ -99,9 +107,7 @@
       }
       .header-nav {
         /* 
-          1. nav 수평 정렬
-          2. nav 너비
-          3. nav 스페이스 비트윈
+          1. nav 너비
           */
         max-width: 37rem;
       }
