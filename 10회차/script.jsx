@@ -13,7 +13,7 @@ const new_hamburger_Array = [];
 
 function count_hamburger() {``
     if (new_hamburger_Array.length === 0) {
-        num.textContent = ``
+        Hamburger_counting.textContent = ``
     } else {
         Hamburger_counting.textContent = `${new_hamburger_Array.length}개의 버거를 추가하셨습니다.`
     }
