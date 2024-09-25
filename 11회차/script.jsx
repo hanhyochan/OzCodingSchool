@@ -10,7 +10,7 @@ function createNum() {
         if (!numbers.includes(number)) {
             numbers.push(number)
         }
-    } return numbers.sort((a,b) => a - b)
+    } return numbers.sort((a, b) => a - b)
 }
 
 function generateHTML(numbers, winningNum = []) {
