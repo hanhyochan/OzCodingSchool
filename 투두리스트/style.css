@@ -86,7 +86,7 @@ body {
 .todo_item_done {
   list-style: none;
   border: 1px solid;
-  width: 22.7rem;
+  width: 25.5rem;
   height: 3rem;
   color: rgb(168, 168, 168);
   background-color: rgb(238, 238, 238);
