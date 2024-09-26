@@ -8,24 +8,20 @@
   </head>
   <body>
     <div class="container">
+      `
       <h1 id="date"></h1>
-      <form id="form">
+      <form id="todo_form">
         <input
           id="todo_input"
           type="text"
           placeholder="이곳에 할일을 적어주세요"
           autocomplete="off"
         />
-        <button id="submit_btn" type="submit">제출</button>
+        <button id="todo_btn" type="submit">제출</button>
       </form>
-      <ul id="todo_box">
-        <!-- <li class="todo_item">
-            gkdld
-          <div id="todo_item_btn">
-            <span>❌</span><span>✏️</span></div>
-        </li> -->
-      </ul>
+      <ul class="todo_box"></ul>
     </div>
-    <script src="todo.jsx"></script>
+    <script src="script/date.jsx"></script>
+    <script src="script/todo.jsx"></script>
   </body>
 </html>
