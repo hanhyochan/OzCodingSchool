@@ -65,9 +65,36 @@ body{
 }
 
 #display{
+    display: flex;
+    flex-direction: row-reverse;
     height: 8rem;
+    padding: 3rem;
+    font-size: 2rem;
 }
 
-#buttons{
+#buttons_layout{
     height: 34rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 0.7rem;
+}
+
+.button{
+    cursor: pointer;
+}
+
+.button:hover{
+    background-color: rgb(193, 111, 233);
+    color: white;
+}
+
+.button:active{
+    background-color: rgb(154, 77, 192);
+    color: white;
+}
+
+.zero{
+    grid-column: 1 / span 2;
+    grid-row: 5;
 }

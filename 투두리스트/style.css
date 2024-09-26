@@ -1,0 +1,107 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(222, 222, 222);
+}
+
+.container{
+    width: 30rem;
+    height: 50rem;
+    border: 2px dashed rgb(153, 153, 153);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#date{
+    font-size: 1.5rem;
+}
+
+#todo_input{
+    width: 20rem;
+    height: 2.5rem;
+    border: none;
+    border-bottom: 2px solid rgb(153, 153, 153);
+    padding: 1rem;
+    font-size: 1rem;
+    background-color: transparent;
+}
+
+#submit_btn{
+    width: 5rem;
+    height: 2.5rem;
+    background-color: rgb(153, 153, 153);
+    border: 1px solid rgb(118, 118, 118);
+    box-shadow: 0.3rem 0.4rem 0.3rem rgb(185, 185, 185);
+    border-radius: 1000rem;
+    font-size: 1rem;
+    color: white;
+    cursor: pointer;
+    margin-left: 0.2rem;
+}
+
+#submit_btn:hover{
+    background-color: rgb(118, 118, 118);
+    border: 1px solid rgb(118, 118, 118);
+}
+
+#todo_box{
+    margin-top: 1.5rem;
+}
+
+.todo_item{
+    list-style: none;
+    border: 1px solid;
+    width: 22.7rem;
+    height: 3rem;
+    background-color: white;
+    box-shadow: 0.3rem 0.4rem 0.3rem rgb(185, 185, 185);
+    border: none;
+    padding: 0.65rem 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    word-break: break-all;
+    margin-bottom: 1.5rem;
+}
+
+.todo_item_done{
+    list-style: none;
+    border: 1px solid;
+    width: 22.7rem;
+    height: 3rem;
+    color: rgb(168, 168, 168);
+    background-color: rgb(238, 238, 238);
+    border: none;
+    padding: 0.65rem 0.8rem;
+    display: flex;
+    justify-content: space-between;
+    word-break: break-all;
+    margin-bottom: 1.5rem;
+}
+
+.display_none{
+    display: none;
+}
+
+#todo_item_btn{
+    width: 3rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#todo_item_btn:hover{
+    width: 3rem;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
