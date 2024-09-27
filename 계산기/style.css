@@ -73,15 +73,16 @@ body{
 }
 
 #buttons_layout{
+    width: 25.9rem;
     height: 34rem;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    display: inline-flex;
+    flex-wrap: wrap;
     gap: 0.7rem;
 }
 
 .button{
     cursor: pointer;
+    flex-basis: 5.95rem;
 }
 
 .button:hover{
@@ -95,6 +96,5 @@ body{
 }
 
 .zero{
-    grid-column: 1 / span 2;
-    grid-row: 5;
+    flex-basis: 12.6rem;
 }
