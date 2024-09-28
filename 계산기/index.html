@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <link href="style.css" rel="stylesheet" />
-    <style>
-      .border {
-        border: 1px solid black;
-      }
-    </style>
   </head>
   <body>
     <div class="container">
@@ -17,13 +12,15 @@
 
         <div id="nav">
             <div id="nav_btns">
-                <button id="btn_close" class="nav_btn"></button>
-                <button id="btn_min" class="nav_btn"></button>
-                <button id="btn_max" class="nav_btn"></button>
+                <div id="btn_close" class="nav_btn"></div>
+                <div id="btn_min" class="nav_btn"></div>
+                <div id="btn_max" class="nav_btn"></div>
             </div>
         </div>
 
-        <div id="display" class="border">0</div>
+        <div id="display">
+          <p id="display_num"></p>
+        </div>
 
         <div id="buttons_layout">
           <button class="button function">C</button>
@@ -43,12 +40,12 @@
           <button class="button number">3</button>
           <button class="button operator">+</button>
           <button class="button number zero">0</button>
-          <button class="button">.</button>
-          <button class="button">=</button>
+          <button class="button dot">.</button>
+          <button class="button equals">=</button>
         </div>
         
       </div>
     </div>
-    <!-- <script src="script.jsx"></script> -->
+    <script src="script.jsx"></script>
   </body>
 </html>
