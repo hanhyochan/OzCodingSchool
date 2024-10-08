@@ -1,0 +1,116 @@
+.header {
+  /* 
+    1. 전체 위치 고정
+    2. 너비 100%
+    3. 콘텐츠 좌우 패딩 */
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  background-color: white;
+  border-bottom: 0.05px solid black;
+}
+.header-layout {
+  /* 
+    1. 콘텐츠 최대 너비
+    2. 콘텐츠 높이
+    3. 콘텐츠 가운데 정렬
+    4. 스페이스 비트윈
+    */
+  width: 100%;
+  max-width: 95rem;
+  height: 6.3rem;
+  margin: auto;
+  justify-content: space-between;
+}
+
+/* 로고 */
+.header-logo {
+  /* 
+    1. 로고 수평 정렬
+    */
+  align-items: center;
+  font-size: 2rem;
+}
+
+/* 메뉴 nav */
+.header-nav {
+  /* 
+    1. nav 수평 정렬
+    2. nav 너비
+    3. nav 스페이스 비트윈
+    */
+  align-items: center;
+  width: 100%;
+  max-width: 45rem;
+  margin: 0;
+  padding: 0;
+  justify-content: space-between;
+  list-style-type: none;
+}
+.nap-top {
+    /* 
+    1. nav item 포지션 렐러티브
+    */
+  position: reletive;
+}
+.nav-sub {
+    /* 
+    1. nav item 디스플레이 논
+    2. 포지션 앱솔루트
+    3. nav item 스페이스 비트윈
+    */
+  display: none;
+  position: absolute;
+  background-color: black;
+  border-radius: 100rem;
+  list-style-type: none;
+  justify-content: space-between;
+}
+.nav-top:hover .nav-sub {
+    /* 
+    1. nav item 보이기
+    */
+  display: flex;
+}
+.nav-top-title {
+  text-decoration: none;
+  font-size: 1.3rem;
+  color: black;
+}
+.nav-sub > li {
+  margin: 0.7rem 1.4rem 0.7rem 0.5rem;
+}
+.nav-sub-item {
+  font-size: 1.3rem;
+  text-decoration: none;
+  color: white;
+}
+
+/* 우측 아이콘 */
+.header-icons{
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 9rem;
+}
+.header-icon-1{
+  width: 1.4rem;
+  height: 1.4rem;
+}
+
+
+/* mid */
+@media screen and (max-width: 1439px) {
+    .header-layout {
+        /* 
+          1. 콘텐츠 최대 너비
+          */
+          padding: 0 13rem;
+      }
+      .header-nav {
+        /* 
+          1. nav 너비
+          */
+        max-width: 37rem;
+      }
+}
