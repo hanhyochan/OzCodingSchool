@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container">
+      `
+      <h1 id="date"></h1>
+      <form id="todo_form">
+        <input
+          id="todo_input"
+          type="text"
+          placeholder="이곳에 할일을 적어주세요"
+          autocomplete="off"
+        />
+        <button id="todo_btn" type="submit">제출</button>
+      </form>
+      <ul class="todo_box"></ul>
+    </div>
+    <script src="script/date.jsx"></script>
+    <script src="script/todo.jsx"></script>
+  </body>
+</html>
