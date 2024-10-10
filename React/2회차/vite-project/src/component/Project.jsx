@@ -1,12 +1,16 @@
 import { useState } from "react";
-import './App.css';
+import "../App.css";
 
 const Project = () => {
   const [userName, setUserName] = useState("");
   const [userAge, setUserAge] = useState("");
 
   function handleSubmit() {
-    alert(`${userName}님 안녕하세요. 나이는 ${userAge}살이시군요~?`);
+    if (userName !== "" && userAge !== "") {
+      alert(`${userName}님 안녕하세요. 나이는 ${userAge}살이시군요~?`);
+    } else {
+      return;
+    }
   }
 
   function userNamehandleChange(e) {
@@ -25,20 +29,23 @@ const Project = () => {
     <>
       <img
         src="https://health.chosun.com/site/data/img_dir/2023/07/17/2023071701753_0.jpg"
-        alt=""
+        alt="고양이"
+        id="img"
       />
 
-      <form onSubmit={handleSubmit}>
-        <label for="name">이름</label>
-        <input
-          id="name"
-          type="text"
-          value={userName}
-          onChange={userNamehandleChange}
-          placeholder="이름을 입력하세요"
-          autoComplete="off"
-        />
-        <div>
+      <form className="form" onSubmit={handleSubmit}>
+        <div className="inputContainer">
+          <label for="name">이름</label>
+          <input
+            id="name"
+            type="text"
+            value={userName}
+            onChange={userNamehandleChange}
+            placeholder="이름을 입력하세요"
+            autoComplete="off"
+          />
+        </div>
+        <div className="inputContainer">
           <label for="age">나이</label>
           <input
             id="age"
@@ -48,8 +55,8 @@ const Project = () => {
             placeholder="나이를 입력하세요"
             autoComplete="off"
           />
-          <button>사용자 추가</button>
         </div>
+        <button>사용자 추가</button>
       </form>
     </>
   );
