@@ -15,10 +15,10 @@ const TodoList = () => {
   };
 
   const deleteTodoList = (id) => {
-    const deleteaa = todoList.filter((x) => {
+    const deletTodo = todoList.filter((x) => {
       return x.id !== id;
     });
-    setTodoList(deleteaa);
+    setTodoList(deletTodo);
   };
 
   const handleEdit = (id) => {
