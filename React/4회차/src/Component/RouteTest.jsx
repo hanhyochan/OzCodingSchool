@@ -16,8 +16,8 @@ const RouteTest = () => {
   }
   const location = useLocation();
   console.log(location);
-  console.log(location.pathname);
-  console.log(location.search);
+//   console.log(location.pathname);
+//   console.log(location.search);
 
   return (
     <div>
