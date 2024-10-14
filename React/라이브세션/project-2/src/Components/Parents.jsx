@@ -19,18 +19,23 @@ const Parents = () => {
   //     },
   //   ]);
 
-  const [form, setForm] = useState({
-    name: "",
-    age: 0,
-    isMarrid: false,
-  });
+  const [form, setForm] = useState([
+    {
+      name: "",
+      age: 0,
+      isMarrid: false,
+    },
+  ]);
 
   const handleAdd = () => {
-    setForm({
-      name: name,
-      age: age,
-      isMarrid: isMarrid,
-    });
+    setForm([
+      ...form,
+      {
+        name: name,
+        age: age,
+        isMarrid: isMarrid,
+      },
+    ]);
   };
 
   return (
@@ -59,7 +64,9 @@ const Parents = () => {
         onChange={(e) => setIsMarrid(e.target.checked)}
       />
       <button onClick={handleAdd}>추가</button>
-      <Child name={form.name} age={form.age} isMarrid={form.isMarrid} />
+      {form.map((item) => (
+        <Child name={item.name} age={item.age} isMarrid={item.isMarrid} />
+      ))}
     </div>
   );
 };
