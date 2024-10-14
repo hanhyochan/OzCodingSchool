@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "../App.css";
 
 const Moodrendering = () => {
-  const [mood, setMood] = useState("normal");
+  const [mood, setMood] = useState("happy");
 
   // 1. if문으로 조건부 렌더링
   //   const MoodEmoji = () => {
