@@ -4,7 +4,6 @@ import MainPage from "../mainPage";
 import Test from "../page/Test";
 
 const Index = () => {
-
   return (
     <BrowserRouter>
       <Routes>

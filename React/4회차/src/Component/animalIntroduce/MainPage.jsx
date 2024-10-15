@@ -1,6 +1,8 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Main from "./component/Main";
+import { saveToLocalStorage, getFromLocalStorage } from "./component/localStorage";
+
+const initialForm = getFromLocalStorage("storedForm") || [];
 
 function MainPage() {
   const [form, setForm] = useState({
@@ -8,7 +10,11 @@ function MainPage() {
     feature: "",
   });
   const { name, feature } = form;
-  const [formList, setFormList] = useState([]);
+  const [formList, setFormList] = useState(initialForm);
+
+  useEffect(() => {
+    saveToLocalStorage("storedForm", formList);
+  }, [formList]);
 
   function handleChangeInput(e) {
     const { name, value } = e.target;
@@ -16,8 +22,9 @@ function MainPage() {
   }
 
   function handleClickBtn() {
-    const finInfo = {...form, id: Number(new Date())}
+    const finInfo = { ...form, id: Number(new Date()) };
     setFormList((prev) => [...prev, finInfo]);
+    setForm({ name: "", feature: "" });
   }
 
   return (
@@ -34,18 +41,17 @@ function MainPage() {
           />
           <input
             type="text"
-            name="feature" // name 속성 추가
+            name="feature"
             value={feature}
             onChange={handleChangeInput}
             autoComplete="off"
           />
           <button onClick={handleClickBtn}>제출</button>
         </div>
-        <input />
-        <button>검색</button>
-        <Main formList={formList}/>
+        <Main formList={formList} />
       </header>
     </>
   );
 }
+
 export default MainPage;
