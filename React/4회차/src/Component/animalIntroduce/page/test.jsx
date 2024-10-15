@@ -1,9 +1,9 @@
 import { Link, useLocation } from "react-router-dom";
 
-const Test = ({ formList }) => {
+const Test = () => {
   const location = useLocation();
-  const animal = location.state?.formList; // 전달된 state 값 가져오기
-  console.log(animal);
+  const animal = location.state?.formList; 
+
   if (!animal) {
     return <>동물을 찾을 수 없습니다.</>;
   }

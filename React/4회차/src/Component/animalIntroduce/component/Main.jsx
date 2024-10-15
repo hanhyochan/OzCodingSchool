@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { saveToLocalStorage, getFromLocalStorage } from "./localStorage";
-import HandleDelete from "./HandleDelete";
+import DeleteBtn from "./DeleteBtn";
 
 function Main({ formList = [] }) {
   const navigate = useNavigate();
@@ -10,8 +10,6 @@ function Main({ formList = [] }) {
 
   // formList가 빈 배열이면 로컬 스토리지에서 가져온 데이터를 사용
   const displayList = formList.length > 0 ? formList : storedFormList;
-
-  console.log(displayList);
 
   function LimitText(list) {
     return (
@@ -37,7 +35,7 @@ function Main({ formList = [] }) {
               >
                 상세보기
               </button>
-              <button onClick={(formList) => HandleDelete}>삭제</button>
+              <DeleteBtn formList={formList}/>
             </div>
           );
         })}
