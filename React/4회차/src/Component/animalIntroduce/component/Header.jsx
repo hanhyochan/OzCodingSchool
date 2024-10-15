@@ -1,8 +1,8 @@
 import React from "react";
-import { useState, useNavigate } from "react";
+import { useState } from "react";
 import { Main } from "./Main";
 
-export function Header() {
+function Header() {
   const [form, setForm] = useState({
     name: "",
     feature: "",
@@ -49,3 +49,4 @@ export function Header() {
     </>
   );
 }
+export default Header;

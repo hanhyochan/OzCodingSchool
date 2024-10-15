@@ -1,11 +1,19 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
 
-const test = () => {
+const Test = ({formList}) => {
+    const { id } = useParams()
+    const animal = formList.find((animal) => animal.id === Number(id))
+
+    if (!animal) {
+        return <>동물을 찾을 수 없습니다.</>
+    }
     return (
-        <div>
-            하이하이
-        </div>
+        <>
+            <h1>{animal.name}</h1>
+            <p>특징: {animal.feature}</p>
+        </>
     );
 };
 
-export default test;
+export default Test;

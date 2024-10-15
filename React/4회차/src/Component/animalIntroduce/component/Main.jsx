@@ -1,7 +1,7 @@
-import { useNavigate } from "react";
+import { useNavigate } from 'react-router-dom'
 
-export function Main({formList}) {
-  const navigate = useNavigate()
+function Main({formList = []}) {
+  const navigate = useNavigate();
 
   return (
     <>
@@ -10,7 +10,7 @@ export function Main({formList}) {
         {formList.map((info) => (
           <div key={info.id}>
             <p>{info.name}</p> <p>{info.feature}</p>
-            <button onClick={() => useNavigate()}>상세보기</button>
+            <button onClick={() => {navigate('/test/${info.id}')}}>상세보기</button>
           </div>
         ))}
         </div>
@@ -18,3 +18,5 @@ export function Main({formList}) {
     </>
   );
 }
+
+export default Main;
