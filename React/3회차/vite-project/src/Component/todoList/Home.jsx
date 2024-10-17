@@ -5,7 +5,7 @@ import Todo from "./component/todo";
 const Home = () => {
   const [todo, setTodo] = useState("");
   const [todoList, setTodoList] = useState(getLocalStorage("todo") || []);
-  console.log(todoList);
+  
   const HandleSubmit = () => {
     const todoInfo = {
       id: Number(new Date()),

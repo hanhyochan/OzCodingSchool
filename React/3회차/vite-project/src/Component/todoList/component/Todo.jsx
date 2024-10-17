@@ -5,7 +5,6 @@ import { Checkbox } from "../module/Checkbox";
 
 const Todo = ({ todoList, setTodoList }) => {
   const [todoView, setTodoView] = useState(null);
-  const [edited, setEdited] = useState("");
 
   const ViewTemplate = ({ x }) => {
     return (
@@ -34,7 +33,8 @@ const Todo = ({ todoList, setTodoList }) => {
   };
 
   const EditTemplate = ({ x }) => {
-    console.log(x);
+    const [edited, setEdited] = useState("");
+    
     return (
       <>
         <input
@@ -61,7 +61,6 @@ const Todo = ({ todoList, setTodoList }) => {
       </>
     );
   };
-
   return (
     <>
       <ul>
