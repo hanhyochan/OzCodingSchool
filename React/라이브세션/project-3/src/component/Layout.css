@@ -1,0 +1,16 @@
+.gnb ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.gnb li {
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+header {
+    background-color: gray;
+    padding: 10px;
+}
