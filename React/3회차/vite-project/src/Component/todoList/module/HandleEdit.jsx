@@ -1,7 +1,7 @@
 import { saveLocalStorage } from "../module/Localstorage";
 
-export const HandleEditChange = (id, value, edited, setEdited) => {
-    setEdited({ ...edited, [id]: value });
+export const HandleEditChange = (id, value, edited, setEdited) => { 
+  setEdited({ ...edited, [id]: value });
   };
 
 export const HandleEdit = (id ,todoList, setTodoList, edited, setTodoView) => {
