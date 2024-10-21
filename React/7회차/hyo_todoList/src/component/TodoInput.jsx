@@ -5,12 +5,16 @@ const TodoInput = ({ setTodo }) => {
 
   const addTodo = () => {
     const newTodo = {
-      id: Number(new Date()),
+      // id: Number(new Date()),
       content: inputRef.current.value,
       checked: false,
     };
-    setTodo((prev) => [...prev, newTodo]);
-  };
+    fetch("http://localhost:3000/todo", {
+      method: "POST",
+      body: JSON.stringify(newTodo)
+    }).then((res) => res.json())
+    .then((res) => setTodo((prev) => [...prev, res]))
+    }
 
   return (
     <>
