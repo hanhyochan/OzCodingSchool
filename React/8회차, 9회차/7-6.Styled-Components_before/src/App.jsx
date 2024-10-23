@@ -3,8 +3,9 @@ import Content from "./components/Content";
 import Header from "./components/Header";
 import Nav from "./components/Nav";
 import Tab from "./components/Tab";
-import styled, { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle, css } from "styled-components";
 import { flexMixin, gap_padding_radius } from "./styled/styled";
+import { useState } from "react";
 
 const Container = styled.div`
   display: grid;
@@ -56,18 +57,52 @@ const GlobalStyle = createGlobalStyle`
 ::-webkit-scrollbar {
   display: none;
 }
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    transition: background-color 0.2s;
 }
-`
+
+${(props) =>
+  props.darkMode === true
+    ? css`
+        * {
+          background-color: black !important;
+          color: white;
+        }
+
+        svg {
+          fill: white;
+        }
+
+        form {
+          button {
+            background-color: #626262 !important;
+          }
+        }
+
+        form div svg {
+          background-color: #626262;
+        }
+
+        section ul li {
+          background-color: #323232 !important;
+          &:first-child {
+            background-color: #626262 !important;
+          }
+        }
+      `
+    : ""}
+`;
 
 function App() {
+  const [darkMode, setDarkMode] = useState(true);
   return (
     <Container>
-      <GlobalStyle />
-      <Header />
+      <GlobalStyle darkMode={darkMode} />
+      <Header setDarkMode={setDarkMode} />
       <Nav />
       <Tab />
       <StyledMain>

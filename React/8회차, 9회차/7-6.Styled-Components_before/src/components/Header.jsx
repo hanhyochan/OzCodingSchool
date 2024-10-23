@@ -39,9 +39,9 @@ const StyledHeader = styled.header`
       font-weight: 200;
     }
   }
-`
+`;
 
-const Header = () => {
+const Header = ({ setDarkMode }) => {
   return (
     <StyledHeader>
       <Icon type="hamburger" />
@@ -54,6 +54,7 @@ const Header = () => {
       </form>
       <Icon type="cam" />
       <Icon type="bell" />
+      <button onClick={() => setDarkMode((prev) => !prev)}>다크모드</button>
     </StyledHeader>
   );
 };
