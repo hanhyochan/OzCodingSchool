@@ -36,7 +36,7 @@ function App() {
           setIsLoading(false);
         });
     }, [url]);
-    return [isLoading, data];
+    return [isLoading, data]; 
   };
 
   const Advice = () => {
