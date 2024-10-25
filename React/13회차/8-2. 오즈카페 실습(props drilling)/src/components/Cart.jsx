@@ -14,7 +14,7 @@ function Cart ({menu, cart, setCart}) {
                     quantity={el.quantity}
                     cart={cart}
                     setCart={setCart}
-                />) : <div className="no-item">장바구니에 담긴 상품이 없어요!</div>}
+                />) : <div className="no-item">장바구니에 담긴 상품이 없어요!!</div>}
             </ul>
         </>
     )
