@@ -58,7 +58,11 @@ function App() {
           dispatch(increment1)
         }, 1000);
       })}>+</button>
-      <button onClick={() => dispatch(decrement1)}>-</button>
+      <button onClick={() => dispatch((dispatch) => {
+        setTimeout(() => {
+          dispatch(decrement1)
+        }, 1000);
+      })}>-</button>
 
       <div>Counter2: {counter2}</div>
       <button onClick={() => dispatch(increment2)}>+</button>
